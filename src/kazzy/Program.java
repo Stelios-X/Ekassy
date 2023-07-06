@@ -4,10 +4,16 @@ public class Program {
 
 	public static void main(String[] args) 
 	{
-		int[] myarr = {1,2,4,6,7};
+		 //myarr = {1,2,4,6,7};
+		 int[] prices = {7,1,5,3,6,4};
+		 
+		 Stock mystock = new Stock();
+		 mystock.MaxProfit(prices);
 		// TODO Auto-generated method stub
-		SecondSum second_sum = new SecondSum();
-		second_sum.GetTwoSum(myarr, 10);
+		/*SecondSum second_sum = new SecondSum();
+		second_sum.GetTwoSum(myarr, 10);*/
+		
+		
 	}
 
 }
