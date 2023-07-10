@@ -1,6 +1,7 @@
 package kazzy;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class DuplicateSol 
@@ -19,7 +20,7 @@ public class DuplicateSol
 				if(nums[i] == nums[j]) 
 				{
 					x = 1;
-					//A duplicate does exist
+					//In this case, a duplicate does exist
 				}
 			}
 		}
@@ -37,7 +38,7 @@ public class DuplicateSol
 	}
 	
 	
-	//Approach 2 sorting before applying Brute Force
+	//Approach 2 sorting before applying Brute Force, sorting ensures that the search for the duplicate is less complicated
 	public boolean ContainsDuplicate_Sr(int[] myarray) 
 	{
 		int x = 0;
@@ -82,16 +83,44 @@ public class DuplicateSol
 		
 		if(x == 1) 
 		{
-			System.out.print("There are duplicates present");
+			//System.out.print("There are duplicates present");
 			return true;
 		}
 	   else 
 	   {
-		   System.out.print("No duplicates present");
+		  // System.out.print("No duplicates present");
 		   return false;
 	   }
 		
 		
 	}
+	
+	//Approach 4 HshMap implementation
+	public boolean ContainsDuplicate_HM(int[] myarr) 
+	{
+		int x = 0;
+		HashMap<Integer, Integer> newmap = new HashMap<>();
+		for(int element : myarr) 
+		{
+			if(newmap.containsKey(element) && newmap.get(element) >= 1) 
+			{
+				x = 1;
+			}
+			newmap.put(element, newmap.getOrDefault(element, 0) + 1);
+		}
+		
+		if(x == 1) 
+		{
+			//System.out.println("Duplictaes are present");
+			return true;
+		}
+	   else 
+	   {
+		   //System.out.println("Duplicates are absent");
+		   return false;
+	   }
+		
+	}
+	
 	
 }
