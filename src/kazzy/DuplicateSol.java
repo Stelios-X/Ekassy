@@ -1,6 +1,7 @@
 package kazzy;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class DuplicateSol 
 {
@@ -61,6 +62,36 @@ public class DuplicateSol
 		   //System.out.println("No duplicates in this array");
 			return false;
 		}
+	}
+	
+	
+	//Approach 3 HashSet implementation
+	public boolean ContainsDuplicate_HS(int[] thearray) 
+	{
+		int x = 0;
+		
+		HashSet<Integer> newset = new HashSet<>();
+		for(int element : thearray) 
+		{
+			if(newset.contains(element)) 
+			{
+				x = 1;
+			}
+			newset.add(element);
+		}
+		
+		if(x == 1) 
+		{
+			System.out.print("There are duplicates present");
+			return true;
+		}
+	   else 
+	   {
+		   System.out.print("No duplicates present");
+		   return false;
+	   }
+		
+		
 	}
 	
 }
