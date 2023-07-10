@@ -1,5 +1,7 @@
 package kazzy;
 
+import java.util.Arrays;
+
 public class DuplicateSol 
 {
 
@@ -32,4 +34,33 @@ public class DuplicateSol
 			return false;
 		}
 	}
+	
+	
+	//Approach 2 sorting before applying Brute Force
+	public boolean ContainsDuplicate_Sr(int[] myarray) 
+	{
+		int x = 0;
+		Arrays.sort(myarray);
+		for(int i = 0;i<myarray.length; i++) 
+		{
+			for(int j = i+1; j<myarray.length;j++) 
+			{
+				if(myarray[i] == myarray[j]) 
+				{
+					x = 1;
+				}
+			}
+		}
+		if(x == 1) 
+		{
+			//System.out.println("Duplicates are present");
+			return true;
+		}
+	   else 
+		{
+		   //System.out.println("No duplicates in this array");
+			return false;
+		}
+	}
+	
 }
