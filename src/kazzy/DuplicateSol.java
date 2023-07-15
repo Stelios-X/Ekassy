@@ -111,7 +111,7 @@ public class DuplicateSol
 		
 		if(x == 1) 
 		{
-			//System.out.println("Duplictaes are present");
+			//System.out.println("Duplicate	s are present");
 			return true;
 		}
 	   else 
