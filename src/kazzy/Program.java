@@ -5,10 +5,10 @@ public class Program {
 	public static void main(String[] args) 
 	{
 		 //myarr = {1,2,4,6,7};
-		 int[] prices = {8,-8};
+		 int[] prices = {-2,1,-3,4,-1,2,1,-5,4};
 		 
-		 Asteroid troid = new Asteroid();
-		 troid.asteroidCollision(prices);
+		 MaximumSubarray sub = new MaximumSubarray();
+		 sub.maxSubArray(prices);
 		
 		 //SecondSum newsum = new SecondSum();
 		// newsum.ObtainTwoSum(prices, 5);
