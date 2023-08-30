@@ -4,14 +4,14 @@ public class Program {
 
 	public static void main(String[] args) 
 	{
-		 //myarr = {1,2,4,6,7};
-		 int[] prices = {-2,1,-3,4,-1,2,1,-5,4};
+		int [] myarr = {1,2,4,6,7};
+		 //int[] prices = {-2,1,-3,4,-1,2,1,-5,4};
 		 
-		 MaximumSubarray sub = new MaximumSubarray();
-		 sub.maxSubArray(prices);
+		 //MaximumSubarray sub = new MaximumSubarray();
+		 //sub.maxSubArray(prices);
 		
-		 //SecondSum newsum = new SecondSum();
-		// newsum.ObtainTwoSum(prices, 5);
+		SecondSum newsum = new SecondSum();
+		 newsum.twoSumSolution(myarr, 9);
 		// TODO Auto-generated method stub
 		/*SecondSum second_sum = new SecondSum();
 		second_sum.GetTwoSum(myarr, 10);*/
